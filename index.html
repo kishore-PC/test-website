@@ -1,1 +1,100 @@
-Testing
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Diwali Wishes</title>
+  <style>
+    :root {
+      --bg1: #1a0f00;
+      --bg2: #4a1d00;
+      --gold: #ffd166;
+      --amber: #ff9f1c;
+      --cream: #fff7e6;
+      --card: rgba(255, 247, 230, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--cream);
+      background:
+        radial-gradient(circle at top, rgba(255, 209, 102, 0.18), transparent 35%),
+        linear-gradient(160deg, var(--bg1), var(--bg2));
+      padding: 24px;
+    }
+    .card {
+      width: min(720px, 100%);
+      background: var(--card);
+      border: 1px solid rgba(255, 209, 102, 0.25);
+      border-radius: 24px;
+      padding: 40px 28px;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(4px);
+    }
+    .diyas {
+      font-size: 2rem;
+      letter-spacing: 0.25rem;
+      margin-bottom: 8px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      color: var(--gold);
+      text-shadow: 0 0 18px rgba(255, 159, 28, 0.35);
+    }
+    .subtitle {
+      margin: 10px 0 24px;
+      font-size: 1.1rem;
+      color: #ffe3a3;
+    }
+    .message {
+      margin: 0 auto;
+      max-width: 56ch;
+      line-height: 1.7;
+      font-size: 1.1rem;
+    }
+    .highlight {
+      margin: 24px auto;
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 209, 102, 0.35);
+      color: var(--gold);
+      background: rgba(255, 159, 28, 0.08);
+    }
+    .from {
+      margin-top: 28px;
+      font-size: 1rem;
+      color: #ffdca8;
+    }
+    .from strong { color: var(--gold); }
+    footer {
+      margin-top: 18px;
+      font-size: 0.9rem;
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="diyas" aria-hidden="true">🪔 ✨ 🪔 ✨ 🪔</div>
+    <h1>Happy Diwali!</h1>
+    <p class="subtitle">Wishing you a festival full of light, joy, and prosperity</p>
+
+    <p class="message">
+      May the glow of diyas brighten your home, the warmth of loved ones fill your heart,
+      and the year ahead bring you happiness, good health, and success.
+    </p>
+
+    <div class="highlight">May your life shine as bright as the Diwali lights.</div>
+
+    <p class="from">With warm wishes,<br /><strong>[Your Name]</strong></p>
+    <footer>Have a safe and sparkling Diwali!</footer>
+  </main>
+</body>
+</html>
