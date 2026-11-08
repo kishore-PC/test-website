@@ -1,238 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tirupur Fresh Grocery | Daily Essentials Delivered with Care</title>
-  <meta name="description" content="Tirupur Fresh Grocery - fresh vegetables, fruits, staples, dairy, and household essentials in Tirupur, Tamil Nadu." />
-  <style>
-    :root {
-      --green: #1f7a4d;
-      --green-dark: #165a39;
-      --leaf: #eaf6ef;
-      --orange: #f4a261;
-      --text: #1f2937;
-      --muted: #5b6472;
-      --bg: #f8faf8;
-      --card: #ffffff;
-      --border: #dbe7df;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.5;
-    }
-    a { color: inherit; }
-    .container { width: min(1100px, calc(100% - 32px)); margin: 0 auto; }
-    header {
-      position: sticky; top: 0; z-index: 10;
-      background: rgba(255,255,255,0.95);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(6px);
-    }
-    .nav {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 16px; padding: 14px 0;
-    }
-    .brand { font-weight: 700; color: var(--green-dark); font-size: 1.1rem; }
-    .nav-links { display: flex; gap: 14px; flex-wrap: wrap; font-size: 0.95rem; color: var(--muted); }
-    .nav-links a { text-decoration: none; }
-    .btn {
-      display: inline-block; padding: 11px 16px; border-radius: 10px;
-      text-decoration: none; font-weight: 700; border: 1px solid transparent;
-    }
-    .btn-primary { background: var(--green); color: #fff; }
-    .btn-primary:hover { background: var(--green-dark); }
-    .btn-outline { background: #fff; border-color: var(--border); color: var(--green-dark); }
-    .hero {
-      padding: 56px 0 36px;
-      background: linear-gradient(180deg, var(--leaf), var(--bg));
-    }
-    .hero-grid {
-      display: grid; grid-template-columns: 1.3fr 1fr; gap: 24px; align-items: stretch;
-    }
-    .hero h1 { margin: 0 0 12px; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; }
-    .hero p { margin: 0 0 18px; color: var(--muted); font-size: 1.05rem; }
-    .badges { display: flex; gap: 10px; flex-wrap: wrap; margin: 18px 0 0; }
-    .badge {
-      background: #fff; border: 1px solid var(--border); color: var(--green-dark);
-      padding: 8px 12px; border-radius: 999px; font-size: 0.9rem;
-    }
-    .hero-card {
-      background: var(--card); border: 1px solid var(--border); border-radius: 16px;
-      padding: 20px; box-shadow: 0 8px 24px rgba(31,122,77,0.06);
-    }
-    .hero-card h2 { margin: 0 0 10px; font-size: 1.2rem; }
-    .hero-card ul { margin: 0; padding-left: 18px; color: var(--muted); }
-    .hero-card li { margin: 8px 0; }
-    section { padding: 34px 0; }
-    h2.section-title { margin: 0 0 8px; font-size: 1.7rem; }
-    .section-sub { margin: 0 0 18px; color: var(--muted); }
-    .grid { display: grid; gap: 16px; }
-    .grid-4 { grid-template-columns: repeat(4, 1fr); }
-    .grid-3 { grid-template-columns: repeat(3, 1fr); }
-    .card {
-      background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px;
-    }
-    .card h3 { margin: 0 0 6px; font-size: 1.05rem; }
-    .card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
-    .icon { font-size: 1.5rem; margin-bottom: 8px; }
-    .offer {
-      background: linear-gradient(135deg, var(--green), var(--green-dark));
-      color: #fff; border-radius: 18px; padding: 24px;
-      display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
-    }
-    .offer p { margin: 6px 0 0; color: rgba(255,255,255,0.9); }
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .contact-item { margin: 10px 0; color: var(--muted); }
-    .contact-item strong { color: var(--text); }
-    footer {
-      border-top: 1px solid var(--border); padding: 22px 0 34px; color: var(--muted); font-size: 0.95rem;
-    }
-    @media (max-width: 900px) {
-      .hero-grid, .grid-4, .grid-3, .contact-grid { grid-template-columns: 1fr; }
-      .nav { flex-direction: column; align-items: flex-start; }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="container nav">
-      <div class="brand">Tirupur Fresh Grocery</div>
-      <nav class="nav-links" aria-label="Main">
-        <a href="#categories">Categories</a>
-        <a href="#why-us">Why Us</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a class="btn btn-primary" href="#contact">Order / Enquire</a>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <h1>Your neighborhood grocery shop in Tirupur</h1>
-          <p>
-            Fresh vegetables, fruits, staples, dairy, snacks, and daily household essentials —
-            all in one place. Quality products at fair prices for families across Tirupur.
-          </p>
-          <div>
-            <a class="btn btn-primary" href="tel:+919000000000">Call Now</a>
-            <a class="btn btn-outline" href="#categories">Browse Categories</a>
-          </div>
-          <div class="badges">
-            <span class="badge">Fresh Stock Daily</span>
-            <span class="badge">Affordable Prices</span>
-            <span class="badge">Serving Tirupur</span>
-          </div>
-        </div>
-        <aside class="hero-card" aria-label="Store highlights">
-          <h2>Today at our store</h2>
-          <ul>
-            <li>Farm-fresh vegetables and seasonal fruits</li>
-            <li>Rice, dal, flour, oil, and spices</li>
-            <li>Milk, curd, and daily dairy needs</li>
-            <li>Snacks, beverages, and home care items</li>
-            <li>Friendly service and quick billing</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
-    <section id="categories">
-      <div class="container">
-        <h2 class="section-title">Shop by category</h2>
-        <p class="section-sub">Everything you need for your home, available nearby in Tirupur.</p>
-        <div class="grid grid-4">
-          <div class="card">
-            <div class="icon">🥦</div>
-            <h3>Vegetables & Fruits</h3>
-            <p>Fresh, handpicked produce for your daily cooking.</p>
-          </div>
-          <div class="card">
-            <div class="icon">🌾</div>
-            <h3>Staples & Grains</h3>
-            <p>Rice, atta, pulses, sugar, salt, and essential groceries.</p>
-          </div>
-          <div class="card">
-            <div class="icon">🥛</div>
-            <h3>Dairy & Bakery</h3>
-            <p>Milk, curd, butter, bread, and everyday breakfast items.</p>
-          </div>
-          <div class="card">
-            <div class="icon">🧴</div>
-            <h3>Home Essentials</h3>
-            <p>Cleaning supplies, personal care, and household basics.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="why-us">
-      <div class="container">
-        <h2 class="section-title">Why customers choose us</h2>
-        <p class="section-sub">A reliable local grocery store focused on freshness, value, and service.</p>
-        <div class="grid grid-3">
-          <div class="card">
-            <h3>Quality you can trust</h3>
-            <p>We stock carefully selected products and refresh produce regularly.</p>
-          </div>
-          <div class="card">
-            <h3>Convenient for Tirupur families</h3>
-            <p>Easy to reach, quick shopping, and the essentials you buy every week.</p>
-          </div>
-          <div class="card">
-            <h3>Fair pricing</h3>
-            <p>Competitive prices on daily needs with honest, friendly service.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="offer">
-          <div>
-            <h2 style="margin:0;">Weekly essentials, made easy</h2>
-            <p>Call us to check availability, place an order, or ask about today’s fresh arrivals.</p>
-          </div>
-          <a class="btn btn-outline" href="#contact" style="background:#fff;">Get Store Details</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <h2 class="section-title">Visit or contact us</h2>
-        <p class="section-sub">Update the placeholders below with your shop’s exact details.</p>
-        <div class="contact-grid">
-          <div class="card">
-            <h3>Store details</h3>
-            <p class="contact-item"><strong>Shop Name:</strong> Tirupur Fresh Grocery</p>
-            <p class="contact-item"><strong>Address:</strong> [Your Street/Area], Tirupur, Tamil Nadu - [PIN]</p>
-            <p class="contact-item"><strong>Phone:</strong> <a href="tel:+919000000000">+91 90000 00000</a></p>
-            <p class="contact-item"><strong>WhatsApp:</strong> <a href="https://wa.me/919000000000">+91 90000 00000</a></p>
-          </div>
-          <div class="card">
-            <h3>Opening hours</h3>
-            <p class="contact-item"><strong>Monday - Saturday:</strong> 7:00 AM - 9:30 PM</p>
-            <p class="contact-item"><strong>Sunday:</strong> 7:00 AM - 1:00 PM</p>
-            <p class="contact-item"><strong>Service Area:</strong> Tirupur and nearby localities</p>
-            <p class="contact-item"><strong>Note:</strong> Home delivery availability can be added here.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      &copy; 2026 Tirupur Fresh Grocery. All rights reserved.
-    </div>
-  </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Namma Grocery | Grocery Shop in Tiruppur | Online Kirana Ordering</title>
+    <meta name="description" content="Namma Grocery - your trusted neighbourhood kirana shop in Tiruppur, Tamil Nadu. Browse groceries, add to cart, and place your order easily on WhatsApp." />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://example.com/" />
+    <meta property="og:title" content="Namma Grocery | Grocery Shop in Tiruppur" />
+    <meta property="og:description" content="Fresh products, fair prices, and friendly service. Order groceries on WhatsApp from your local Tiruppur kirana store." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_IN" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "GroceryStore",
+        "name": "Namma Grocery",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Tiruppur",
+          "addressRegion": "Tamil Nadu",
+          "addressCountry": "IN"
+        },
+        "telephone": "+91-90000-00000",
+        "url": "https://example.com/"
+      }
+    </script>
+  </head>
+  <body class="bg-brand-bg text-brand-text font-sans">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
